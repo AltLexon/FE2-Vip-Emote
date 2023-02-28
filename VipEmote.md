@@ -5,8 +5,6 @@
 ```lua
 local Players = game:GetService('Players')
 
-if not game.PlaceId == 12339127827 then return end
-
 local function Change()
   local script = getsenv(Players.LocalPlayer.Character.Animate)
   script.changeEmote(1584520816)
