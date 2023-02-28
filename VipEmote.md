@@ -20,7 +20,7 @@ You have 2 options
 
 First we need get the animation id ( you need the emote )
 
-## Setupvalue option
+### Setupvalue option
 
 ```lua
 local Players = game:GetService('Players')
@@ -32,7 +32,7 @@ local id = getupvalues(script.changeEmote)[1].customemote[1].id -- customemote i
 print(id) -- Prints the id
 ```
 
-## getgc() option
+### getgc() option
 
 ```lua
 local function getId()
