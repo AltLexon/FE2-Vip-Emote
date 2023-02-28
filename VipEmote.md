@@ -4,7 +4,9 @@
 
 ```lua
 local Players = game:GetService('Players')
+
 if not game.PlaceId == 12339127827 then return end
+
 Players.LocalPlayer.CharacterAdded:Connect(function(Char)
   local script = getsenv(Char.Animate)
   script.changeEmote(1584520816)
