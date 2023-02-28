@@ -5,12 +5,19 @@
 ```lua
 local Players = game:GetService('Players')
 
-local function Change()
-  local script = getsenv(Players.LocalPlayer.Character.Animate)
+local function Change(Character)
+  local script = getsenv(Character.Animate)
   script.changeEmote(1584520816)
 end
 
-Change()
+Change(Players.LocalPlayer.Character)
+
+local function newCharacter(Character)
+  task.wait(1)
+  Change(Character)
+end
+
+Players.LocalPlayer.CharacterAdded:Connect(newCharacter)
 ```
 
 ## How i made?
