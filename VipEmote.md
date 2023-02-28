@@ -13,11 +13,6 @@ local function Change()
 end
 
 Change()
-
-Players.LocalPlayer.CharacterAdded:Connect(function(Char)
-  Char:WaitForChild('Animate', 9e9)
-  Change()
-end)
 ```
 
 ## How i made?
