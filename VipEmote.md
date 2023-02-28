@@ -7,9 +7,16 @@ local Players = game:GetService('Players')
 
 if not game.PlaceId == 12339127827 then return end
 
-Players.LocalPlayer.CharacterAdded:Connect(function(Char)
+local function Change()
   local script = getsenv(Char.Animate)
   script.changeEmote(1584520816)
+end
+
+Change()
+
+Players.LocalPlayer.CharacterAdded:Connect(function(Char)
+  Char:WaitForChild('Animate', 9e9)
+  Change()
 end)
 ```
 
